@@ -1,4 +1,4 @@
-/* import clearDom from '../utils/clearDom';
+import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
 const emptyVocab = () => {
@@ -28,4 +28,3 @@ const showVocab = (array) => {
 };
 
 export { emptyVocab, showVocab };
-*/
