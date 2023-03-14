@@ -2,14 +2,14 @@
   "-MiBsBKGWFEU-yluJkL-": {
     "firebaseKey": "-MiBsBKGWFEU-yluJkL-",
     "description": "",
-    "language": "html",
+    "language": "HTML",
     "title": "Div",
     "uid": ""
   },
   "-MiBsknNSQ6aBG1-2lQS": {
     "firebaseKey": "-MiBsknNSQ6aBG1-2lQS",
     "description": "",
-    "language": "JS",
+    "language": "Javascript",
     "title": "Promise",
     "uid": ""
   },
@@ -18,12 +18,5 @@
     "description": "",
     "language": "CSS",
     "title": "Box Model",
-    "uid": ""
-  },
-  "-MiBuU13EaKmGOMjJF-X": {
-    "firebaseKey": "-MiBuU13EaKmGOMjJF-X",
-    "description": "",
-    "language": "Postman",
-    "title": "Postman Get",
     "uid": ""
   }}
