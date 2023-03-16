@@ -1,30 +1,34 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
-const emptyVocab = () => {
-  const domString = '<h1>No Vocab Words</h1>';
+const emptyVocabs = () => {
+  const domString = '<h1>No Vocabularies</h1>';
   renderToDOM('#store', domString);
 };
 
-const showVocab = (array) => {
+const showVocabs = (array) => {
   clearDom();
-
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-btn">Add A Word</button>';
-  renderToDOM('#add-button', btnString);
-
   let domString = '';
   array.forEach((item) => {
-    domString += `<div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">${item.word}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">${item.language}</h6>
-      <p class="card-text">${item.definition}</p>
-      <button id="edit-card-btn--${item.firebaseKey}">Edit</button>
-      <button id="delete-card-btn--${item.firebaseKey}">Delete</button>
-    </div>
-  </div>`;
+    domString += `
+      <div class="card">
+          <div class="card-body" style="height: 50%;">
+            <h2 class="card-header">${item.title}</h2>
+            <br>
+            <h4 class="card-language">Language: ${item.language}</h4>
+            <br>
+            <div id="def-txt">
+            <p class="card-definition">${item.description}</p>
+            </div>
+              <div id="cards-btn">
+              <hr>
+              <i id="edit-vocab-btn--${item.firebaseKey}" class="btn btn-info">Edit</i>
+              <i id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger">Delete</i>
+              </div>
+          </div>
+        </div>`;
   });
   renderToDOM('#store', domString);
 };
 
-export { emptyVocab, showVocab };
+export { showVocabs, emptyVocabs };
