@@ -1,15 +1,16 @@
-import { getVocab } from '../api/vocab';
+import getVocabs from '../api/vocab';
 import logoutButton from '../components/logoutButton';
-import { showVocab } from '../pages/vocabCard';
+import { showVocabs } from '../pages/vocabCard';
+
 import domBuilder from '../Shared/domBuilder';
 import navBar from '../Shared/navBar';
 
 const startApp = (user) => {
-  domBuilder(user);
+  domBuilder();
   navBar();
   logoutButton();
 
-  getVocab(user.uid).then((books) => showVocab(books));
+  getVocabs(user.uid).then((vocabs) => showVocabs(vocabs));
 };
 
 export default startApp;
