@@ -8,6 +8,9 @@ const emptyVocabs = () => {
 
 const showVocabs = (array) => {
   clearDom();
+
+  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-book-btn">Add A Card</button>';
+  renderToDOM('#add-button', btnString);
   let domString = '';
   array.forEach((item) => {
     domString += `
