@@ -6,15 +6,15 @@ const addVocabForm = (obj = {}) => {
   const domString = `
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
       <div class="form-group">
-        <label for="title">Vocabulary</label>
-        <input type="text" class="form-control" id="Vocabulary" aria-describedby="bookTitle" placeholder="Enter A Vocabulary" value="${obj.Vocabulary || ''}" required>
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" aria-describedby="bookTitle" placeholder="Enter A Vocabulary" value="${obj.title || ''}" required>
       </div>
       <div class="form-group">
         <label for="description">Definition</label>
-        <textarea class="form-control" placeholder="Definition" id="description" style="height: 100px">${obj.Definition || ''}</textarea>
+        <textarea class="form-control" placeholder="Description" id="description" style="height: 100px">${obj.description || ''}</textarea>
       </div>
       <div class="form-group" id="select-language">
-      <label for="category">Category</label>
+      <label for="category">Language</label>
         <select class="form-control" placeholder="Select Category" id="language" name="vocabCategory" value="${obj.language || ''}" required>
         <option value="">Select a Language</option>
           <option value="HTML" ${obj.language === 'HTML' ? 'selected' : ''}>HTML</option>

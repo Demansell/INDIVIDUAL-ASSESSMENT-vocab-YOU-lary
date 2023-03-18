@@ -13,6 +13,11 @@ const domEvents = (user) => {
         });
       }
     }
+    // TODO: CLICK EVENT FOR SHOWING FORM FOR ADDING A  Vocab
+    if (e.target.id.includes('add-book-btn')) {
+      addVocabForm(user);
+    }
+
     if (e.target.id.includes('edit-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleVocabs(firebaseKey).then((vocabObj) => addVocabForm(vocabObj));
