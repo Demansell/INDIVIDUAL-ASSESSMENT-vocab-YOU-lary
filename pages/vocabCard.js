@@ -15,7 +15,7 @@ const showVocabs = (array) => {
   array.forEach((item) => {
     domString += `
       <div class="card">
-          <div class="card-body" style="height: 50%;">
+          <div class="card-body" style="height: 20%;">
             <h2 class="card-header">${item.title}</h2>
             <br>
             <h4 class="card-language">Language: ${item.language}</h4>
