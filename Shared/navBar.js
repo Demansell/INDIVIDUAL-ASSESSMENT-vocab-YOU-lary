@@ -16,7 +16,7 @@ const navBar = () => {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="HTML">HTML</a>
+              <a class="nav-link" href="#" id="Html">HTML</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="JS">Javascript</a>
